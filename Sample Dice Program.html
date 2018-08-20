@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>Sample Dice Program</title>
+</head>
+<body>
+<h1>Sample Dice Program</h1>
+<script type="text/javascript">
+var name = prompt("Enter your name:", "");
+var numDice = prompt("Enter the number of dice to roll:", "");
+document.write("Hello " + name + "</br></br>");
+document.write("You rolled: ");
+var total=0;
+for(i=0; i<numDice; i++) {
+var ranNumber = Math.floor(Math.random()*6);
+total = parseInt(ranNumber) + parseInt(total);
+if (i < numDice-1) {
+document.write(ranNumber + ", ");
+} else {
+document.write(ranNumber);
+}
+}
+document.write("</br>" + total);
+</script>
+</body>
+</html>
